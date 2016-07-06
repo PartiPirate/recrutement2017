@@ -1,0 +1,137 @@
+body {
+    height: 100%;
+    color: @spectrumDark;
+    background-color: @spectrumLight;
+}
+
+html {
+    height: 100% !important;
+    -ms-overflow-style: scrollbar;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    -webkit-backface-visibility: hidden;
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+section,
+aside {
+    padding: 50px 0;
+}
+
+@media(min-width:767px) {
+    section {
+        padding: 100px 0;
+    }
+}
+
+.well {
+    border: none;
+    box-shadow: none;
+    background-color: darken(@spectrumLight, 3%);
+}
+
+.jumbotron {
+    background-color: lighten(@spectrumLight, 3%);
+}
+
+.page-header {
+    border-bottom-color: darken(@spectrumLight, 10%)
+}
+
+.img-light-border {
+    border: 5px solid @spectrumLight;
+}
+
+.img-dark-border {
+    border: 5px solid @spectrumDark;
+}
+
+.light-faded-border {
+    border: solid 15px fade(@spectrumLight, 50%);
+}
+
+.dark-faded-border {
+    border: solid 15px fade(@spectrumDark, 50%);
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.padding-top {
+    padding-top: 100px;
+}
+
+.padding-bottom {
+    padding-bottom: 100px;
+}
+
+//Highlight Color Customization 
+
+::-moz-selection {
+    text-shadow: none;
+    background: fade(@spectrumPrimary, 50%);
+}
+
+::selection {
+    text-shadow: none;
+    background: fade(@spectrumPrimary, 50%);
+}
+
+img::selection {
+    background: transparent;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: fade(@spectrumPrimary, 50%);
+}
+
+// Owl Carousel Color Overrides
+
+.owl-theme .owl-controls .owl-page span {
+    background: darken(@spectrumLight, 15%);
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+    background: darken(@spectrumLight, 15%);
+}
+
+// Modal
+
+.modal-dialog {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal-content {
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 100%;
+}

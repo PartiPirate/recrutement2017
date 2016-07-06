@@ -1,0 +1,53 @@
+// Footers
+
+.footer-1 {
+	.upper {
+		padding: 50px 0;
+		color: @spectrumLight;
+		background-color: darken(@spectrumDark, 10%);
+
+		p {
+			color: fade(@spectrumLight, 80%);
+		}
+		h2 {
+			padding-bottom: 10px;
+		}
+		h4 {
+			padding-bottom: 10px;
+			padding-top: 25px;
+		}
+		.footer-links {
+			li {
+				padding-bottom: 10px;
+				a {
+					color: @spectrumLight;
+					&:hover {
+						color: @spectrumPrimary;
+					}
+				}
+			}
+		}
+	}
+	.lower {
+		padding: 15px 0;
+		background-color: darken(@spectrumDark, 20%);
+		.small {
+			color: fade(@spectrumLight, 70%);
+		}
+	}
+}
+
+.footer-2 {
+	padding: 50px 0;
+	h2,
+	h3 {
+		padding-bottom: 10px;
+	}
+}
+
+@media(max-width:990px) {
+	.footer-1,
+	.footer-2 {
+		text-align: center;
+	}
+}

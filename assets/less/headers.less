@@ -1,0 +1,378 @@
+// Intro Sections
+
+// -- Global Elements
+
+.intro-img,
+.intro-img-half,
+.intro-slider,
+.intro-slider-half,
+.intro-video {
+    width: 100%;
+    text-align: center;
+    .intro-welcome {
+        font-size: 20px;
+        margin: 0;
+        .script-font;
+        .text-shadow-dark;
+    }
+    .brand-heading {
+        font-size: 30px;
+        margin: 0;
+        .text-shadow-dark;
+        text-transform: uppercase;
+    }
+    .intro-body {
+        position: relative;
+    }
+    .overlay {
+        display: none;
+    }
+}
+
+@media(min-width:768px) {
+    .intro-img,
+    .intro-slider,
+    .intro-video,
+    .intro-img-half,
+    .intro-slider-half {
+        .intro-welcome {
+            font-size: 30px;
+            margin: 0 0 -10px;
+        }
+        .brand-heading {
+            font-size: 55px;
+        }
+        .intro-body {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+        .overlay {
+            display: block;
+            width: 100%;
+            background-color: black;
+            background-image: url('../img/diagonal-noise.png');
+            opacity: 0.3;            
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;       
+        }
+    }
+}
+
+@media(min-width:1025px) {
+    .intro-img,
+    .intro-slider,
+    .intro-video,
+    .intro-img-half,
+    .intro-slider-half {
+        .intro-welcome {
+            font-size: 40px;
+        }
+        .brand-heading {
+            font-size: 70px;
+        }
+    }
+}
+
+// -- Intro Section Heights and Overlay Heights (Mobile is AUTO with Minimum Height of 100% - 767 px and up is 100% for full, 60% for half)
+
+.intro-img,
+.intro-img-half,
+.intro-video {
+    height: auto;
+}
+
+.intro-img,
+.intro-img-half,
+.intro-video {
+    padding: 100px 0 50px;
+}
+
+.intro-slider,
+.intro-slider-half {
+    padding: 0;
+    height: 500px;
+}
+
+@media only screen and (min-width:768px) {
+    .intro-img,
+    .intro-slider,
+    .intro-video,
+    .video-bg {
+        padding: 0;
+        height: 100%;
+        min-height: 0;
+        .overlay {
+            height: 100%;
+        }
+    }
+    .intro-img-half {
+        height: 60%;
+        min-height: 0;
+        .overlay {
+            height: 60%;
+            min-height: 0;
+        }
+    }
+    .intro-slider-half {
+        height: 60%;
+        min-height: 0;
+        .overlay {
+            height: 100%;
+            min-height: 0;
+        }
+    }    
+}
+
+// -- Intro Body Content Positioning (Centers the content in the Intro Body)
+
+@media(min-width:768px) {
+    .intro-img,
+    .intro-video {
+        .intro-body {
+            top: 30%;
+        }
+    }
+
+    .intro-img-half {
+        .intro-body{
+            top: 15%;
+        }
+    }
+
+    .intro-slider {
+        .intro-body {
+            top: 0;
+        }
+    }
+
+    .intro-slider-half {
+        .intro-body {
+            top: 0;
+            margin-top: -25px;
+        }
+    }
+}
+
+// -- Image Intro Section Styles (NOTE: Actual Background Images are Set Separately!)
+
+ .intro-img,
+ .intro-img-half {
+    background-color: @spectrumDark;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    .background-cover;
+    .carousel {
+        h4 {
+            font-size: 16px;
+            height: 50px;
+        }
+    }
+}
+
+// -- Slider Intro Section Styles
+
+.intro-slider,
+.intro-slider-half {
+    background-color: @spectrumDark;
+    .carousel {
+        height: 100%;
+        h4 {
+            font-size: 22px;
+        }
+    }
+    .carousel-inner {
+        height: 100%;
+    }
+    .item {
+        height: 100%;
+    }
+    .carousel-caption {
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 0;
+    }
+    .fill {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        .background-cover;
+    }
+}
+
+@media(min-width:768px) {
+    .intro-slider,
+    .intro-slider-half {
+        .carousel-caption {
+            width: auto;
+            right: 0;
+            left: 0;
+            top: 30%;
+            bottom: 0;
+        }
+        .carousel {
+            h4 {
+                font-size: 26px;
+            }
+        }
+        .carousel-caption {
+            width: auto;
+        }
+    }
+}
+
+// -- Video Intro Section Styles
+
+.video-bg {
+    position: relative;
+    width: 100%;
+    background: fade(black, 50%);
+}
+
+.intro-video {
+    position: relative;
+    background: no-repeat bottom center scroll;
+    .background-cover;
+    z-index: 1;
+}
+
+@media(min-width:768px) {
+    .intro-video {
+        position: absolute;
+        background: transparent;
+    }
+}
+
+// Text Carousel Styles (Image and Video Intros)
+
+ .intro-img,
+ .intro-img-half,
+ .intro-video {
+    .carousel {
+        h4 {
+            font-size: 16px;
+            height: 50px;
+        }
+    }
+}
+
+@media(min-width:768px) {
+    .intro-img,
+    .intro-img-half,
+    .intro-video {
+        .carousel {
+            h4 {
+                font-size: 22px;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media(min-width:1025px) {
+    .intro-img,
+    .intro-img-half,
+    .intro-video {
+        .carousel {
+            h4 {
+                font-size: 26px;
+                height: auto;
+            }
+        }
+    }
+}
+
+// -- Intro Text Color - Background Light -or- Dark
+
+.intro-dark-bg {
+    color: @spectrumLight;
+}
+
+.intro-light-bg {
+    color: @spectrumDark;
+}
+
+// -- Overrides Bootstrap Slide Carousel and adds a Fade
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            opacity: 0;
+            -webkit-transition-property: opacity;
+            -moz-transition-property: opacity;
+            -o-transition-property: opacity;
+            transition-property: opacity;
+        }
+        .active {
+            opacity: 1;
+        }
+        .active.left, .active.right {
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+        }
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+    }
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+
+// -- Intro Scroll Button
+
+.btn-scroll-dark,
+.btn-scroll-light {
+    font-size: 30px;
+    background: transparent;
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    line-height: 45px;
+    margin-top: 5px;
+    .button-transition;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+.btn-scroll-dark {
+    color: @spectrumDark;
+    border: 2px solid @spectrumDark;
+    &:hover,
+    &:focus,
+    &:active {
+        color: @spectrumDark;
+        background: fade(@spectrumDark, 20%);
+    }
+}
+
+.btn-scroll-light {
+    color: @spectrumLight;
+    border: 2px solid @spectrumLight;
+    &:hover,
+    &:focus,
+    &:active {
+        color: @spectrumLight;
+        background: fade(@spectrumLight, 20%);
+    }
+}
+
+@media(min-width:768px) {
+    .btn-scroll-dark,
+    .btn-scroll-light {
+        margin-top: 30px;
+    }
+}

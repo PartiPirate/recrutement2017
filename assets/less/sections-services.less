@@ -1,0 +1,212 @@
+// Services/Features Sections
+
+// -- Services/Features Option 1 
+
+.services-1 {
+
+    .icon {
+        display: block;
+        font-size: 0px;
+        cursor: pointer;
+        margin: 15px auto;
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 1;
+        color: @spectrumLight;
+        background: @spectrumPrimary;
+        &:after {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            content:'';
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+        &:before {
+            font-family:'fontawesome';
+            speak: none;
+            font-size: 50px;
+            line-height: 125px;
+            display: block;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+     .icon-effect {
+         .icon {
+            box-shadow: 0 0 0 8px fade(@spectrumPrimary, 50%);
+            overflow: hidden;
+            -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            &:after {
+                display: none;
+            }
+        }
+        li {
+            &:hover {
+                .icon {
+                    background: transparent;
+                    color: @spectrumPrimary;
+                    box-shadow: 0 0 0 4px @spectrumPrimary;       
+                    &:before {
+                        -webkit-animation: toRightFromLeft 0.3s forwards;
+                        -moz-animation: toRightFromLeft 0.3s forwards;
+                        animation: toRightFromLeft 0.3s forwards;
+                    }             
+                }
+            }
+        }
+    }
+
+    @-webkit-keyframes toRightFromLeft {
+        49% {
+            -webkit-transform: translate(100%);
+        }
+        50% {
+            opacity: 0;
+            -webkit-transform: translate(-100%);
+        }
+        51% {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes toRightFromLeft {
+        49% {
+            -moz-transform: translate(100%);
+        }
+        50% {
+            opacity: 0;
+            -moz-transform: translate(-100%);
+        }
+        51% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes toRightFromLeft {
+        49% {
+            transform: translate(100%);
+        }
+        50% {
+            opacity: 0;
+            transform: translate(-100%);
+        }
+        51% {
+            opacity: 1;
+        }
+    }
+
+    #services-1-carousel .item {
+        margin: 0 15px;
+    }
+
+    // Icon Types - To add more use the Font Awesome unicodes
+
+    .icon-rocket:before {
+        content:"\f135";
+    }
+    
+    .icon-code:before {
+        content:"\f121";
+    }
+
+    .icon-mobile:before {
+        content:"\f10b";
+    }
+
+    .icon-envelope-o:before {
+        content:"\f003";
+    }
+
+    .icon-pencil:before {
+        content:"\f040";
+    }
+
+    .icon-wrench:before {
+        content:"\f0ad";
+    }
+
+    .icon-info-circle:before {
+        content:"\f05a";
+    }
+
+    .icon-flag:before {
+        content:"\f024";
+    }    
+
+}
+
+.services-1.bg-dark,
+.services-1.bg-primary,
+.services-1.bg-secondary,
+.services-1.bg-success,
+.services-1.bg-info,
+.services-1.bg-warning,
+.services-1.bg-danger,
+.services-1.bg-parallax-dark {
+
+    .icon {
+        color: @spectrumPrimary;
+        background: @spectrumLight;
+    }
+
+    .icon-effect {
+        .icon {
+            box-shadow: 0 0 0 8px fade(@spectrumLight, 50%);
+        }
+        li {
+            &:hover {
+                .icon {
+                    background: transparent;
+                    color: @spectrumLight;
+                    box-shadow: 0 0 0 4px @spectrumLight;                    
+                }
+            }
+        }
+    }
+
+}
+
+.services-2 {
+    .services-col {
+        text-align: center;
+        margin-bottom: 30px;
+        h3 {
+            margin: 0 0 15px;
+        }
+        i {
+            margin: 0 0 15px;
+        }
+    }
+}
+
+@media(min-width:767px) {
+    .services-2 {
+        .services-col {
+            text-align: inherit;
+            margin-bottom: inherit;
+        }
+        i {
+            margin: 0 0 0;
+        }
+    }
+}
+
+.services-3 {
+    h3,
+    p {
+        text-align: center;
+    }
+    .row {
+        .col-md-4 {
+            margin-bottom: 15px;
+        }
+    }
+}

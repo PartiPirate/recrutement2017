@@ -1,0 +1,101 @@
+// Miscelleneous Sections
+
+// -- General Parallax Section
+
+.bg-parallax-light,
+.bg-parallax-dark {
+    width: 100%;
+    height: auto;
+    background-attachment: scroll;
+    .background-cover;
+    background-position: center center;
+}
+
+.bg-parallax-light {
+	color: @spectrumDark;
+}
+
+.bg-parallax-dark {
+	color: @spectrumLight;
+}
+
+.aside-overlay,
+.section-overlay {
+	background-color: fade(@spectrumPrimary, 80%)
+}
+
+.aside-overlay {
+	padding: 50px 0;
+}
+
+.section-overlay {
+	padding: 100px 0;
+}
+
+@media(min-width:767px) {
+    .bg-parallax-light,
+    .bg-parallax-dark {
+        background-attachment: fixed;
+    }
+}
+
+// -- Device Screens Call to Action
+
+.screen-cta {
+	padding-bottom: 0;
+	overflow-y: hidden;
+}
+
+// -- Clients Section
+
+.clients {
+	#clients-carousel {
+		list-style: none;
+		padding: 0;
+		li.item {
+			margin: 0 15px;
+		}
+	}
+}
+
+// -- Section Colors
+
+.bg-light {
+	background: @spectrumLight !important;
+	color: @spectrumDark !important;
+}
+
+.bg-dark {
+	background: @spectrumDark !important;
+	color: @spectrumLight !important;
+}
+
+.bg-lighter {
+	background: lighten(@spectrumLight, 3%);
+	color: @spectrumDark !important;
+}
+
+.bg-primary {
+	background: @spectrumPrimary !important;
+	color: @spectrumLight !important;
+}
+
+.bg-success {
+	background: @spectrumSuccess !important;
+	color: @spectrumLight !important;
+}
+
+.bg-info {
+	background: @spectrumInfo !important;
+	color: @spectrumLight !important;
+}
+
+.bg-warning {
+	background: @spectrumWarning !important;
+	color: @spectrumLight !important;
+}
+
+.bg-danger {
+	background: @spectrumDanger !important;
+	color: @spectrumLight !important;
+}

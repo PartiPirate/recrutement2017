@@ -1,0 +1,148 @@
+// Typograhpy 
+
+body {
+    .serif-font;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .heading-font;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+.serif {
+    .serif-font;
+}
+
+.sans-serif {
+    .sans-serif-font;
+}
+
+.heading {
+    .heading-font;
+}
+
+.script {
+    .script-font;
+}
+
+.allcaps {
+    text-transform: uppercase !important;
+}
+
+hr.primary,
+hr.light,
+hr.dark {
+    max-width: 100px;
+    margin: 25px auto;
+    border-bottom: none;
+}
+
+hr.primary {
+    border-top: 6px solid @spectrumPrimary;
+}
+
+hr.light {
+    border-top: 6px solid @spectrumLight;
+}
+
+hr.dark {
+    border-top: 6px solid @spectrumDark;
+}
+
+hr.primary-small,
+hr.light-small,
+hr.dark-small {
+    max-width: 50px;
+    margin: 15px auto;
+}
+
+hr.primary-small {
+    border-top: 3px solid @spectrumPrimary;
+}
+
+hr.light-small {
+    border-top: 3px solid @spectrumLight;
+}
+
+hr.dark-small {
+    border-top: 3px solid @spectrumDark;
+}
+
+.text-dark {
+    color: @spectrumDark;
+}
+
+.text-light {
+    color: @spectrumLight;
+}
+
+.text-primary {
+    color: @spectrumPrimary;
+}
+
+.text-success {
+    color: @spectrumSuccess;
+}
+
+.text-info {
+    color: @spectrumInfo;
+}
+
+.text-warning {
+    color: @spectrumWarning;
+}
+
+.text-danger {
+    color: @spectrumDanger;
+}
+
+@media(min-width:767px) {
+    p {
+        margin: 0 0 30px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+a {
+    color: @spectrumPrimary;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: darken(@spectrumPrimary, 10%);
+        outline: none;
+    }
+}
+
+a.light-text {
+    color: darken(@spectrumLight, 10%);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: darken(@spectrumLight, 20%);
+        outline: none;
+    }
+}

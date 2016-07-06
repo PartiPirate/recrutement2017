@@ -1,0 +1,169 @@
+// Contact Sections
+
+.contact-1,
+.contact-2 {
+
+	form {
+		.floating-label-form-group {
+		    position: relative;
+		    margin-bottom: 0;
+		    padding-bottom: 0.5em;
+		    input,
+		    textarea {
+			    z-index: 1;
+			    position: relative;
+			    padding-right: 0;
+			    padding-left: 0;
+			    border: none;
+			    border-radius: 0;
+			    font-size: 1.5em;
+			    background: none;
+			    box-shadow: none !important;
+			    resize: none;
+		    }
+		    label {
+			    display: block;
+			    z-index: 0;
+			    position: relative;
+			    top: 2em;
+			    margin: 0;
+			    font-size: 0.85em;
+			    line-height: 1.764705882em;
+			    vertical-align: middle;
+			    vertical-align: baseline;
+			    opacity: 0;
+			    -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+			    -moz-transition: top 0.3s ease,opacity 0.3s ease;
+			    -ms-transition: top 0.3s ease,opacity 0.3s ease;
+			    transition: top 0.3s ease,opacity 0.3s ease;
+		    }
+		    &::not(:first-child) {
+			    padding-left: 14px;
+		    }
+		}
+		.floating-label-form-group-with-value {
+			label {
+			    top: 0;
+			    opacity: 1;
+			}
+		}
+
+		.floating-label-form-group-with-focus {
+			label {
+			    color: @spectrumPrimary;
+			}
+		}		
+	}
+
+}
+
+.contact-1,
+.contact-1.bg-lighter,
+.contact-2,
+.contact-2.bg-lighter,
+.contact-1.bg-parallax-light,
+.contact-2.bg-parallax-light {
+	form {
+		.floating-label-form-group {
+		    border-bottom: 1px solid lighten(@spectrumDark, 10%);
+		    &::not(:first-child) {
+			    border-left: 1px solid lighten(@spectrumDark, 10%);
+		    }
+		    .form-control {
+		    	color: lighten(@spectrumDark, 20%);
+		    }
+		}
+		.row:first-child .floating-label-form-group {
+			border-top: 1px solid lighten(@spectrumDark, 10%);
+		}
+	}
+	::-webkit-input-placeholder {
+	color: lighten(@spectrumDark, 10%) !important;
+	}
+
+	:-moz-placeholder {
+	color: lighten(@spectrumDark, 10%) !important;
+	}
+
+	::-moz-placeholder {
+	color: lighten(@spectrumDark, 10%) !important;
+	}
+	:-ms-input-placeholder {
+	color: lighten(@spectrumDark, 10%) !important;
+	}	
+}
+
+.contact-1.bg-parallax-dark,
+.contact-1.bg-dark,
+.contact-1.bg-primary,
+.contact-1.bg-secondary,
+.contact-1.bg-success,
+.contact-1.bg-info,
+.contact-1.bg-warning,
+.contact-1.bg-danger,
+.contact-2.bg-parallax-dark,
+.contact-2.bg-dark,
+.contact-2.bg-primary,
+.contact-2.bg-secondary,
+.contact-2.bg-success,
+.contact-2.bg-info,
+.contact-2.bg-warning,
+.contact-2.bg-danger {
+	form {
+		.floating-label-form-group {
+		    border-bottom: 1px solid @spectrumLight;
+		    &::not(:first-child) {
+			    border-left: 1px solid @spectrumLight;
+		    }
+		    .form-control {
+		    	color: lighten(@spectrumLight, 20%);
+		    }
+		}
+		.row:first-child .floating-label-form-group {
+			border-top: 1px solid @spectrumLight;
+		}
+	}
+	::-webkit-input-placeholder {
+	color: fade(@spectrumLight, 80%) !important;
+	}
+
+	:-moz-placeholder {
+	color: fade(@spectrumLight, 80%) !important;
+	}
+
+	::-moz-placeholder {
+	color: fade(@spectrumLight, 80%) !important;
+	}
+	:-ms-input-placeholder {
+	color: fade(@spectrumLight, 80%) !important;
+	}
+}
+
+.contact-2 {
+	position: relative;
+	padding: 0;
+	min-height: 732px;
+	.map-content {
+		padding: 100px 0;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 100;
+	}
+
+	#map-canvas {
+		opacity: 1;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+	}	
+}

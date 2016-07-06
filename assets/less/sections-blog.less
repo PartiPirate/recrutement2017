@@ -1,0 +1,127 @@
+// Blog Sections
+
+.blog-1 {
+	.blog-col {
+		max-width: 400px;
+		margin: 0 auto;
+		.blog-preview-img {
+			display: block;
+			position: relative;
+			.caption {
+				background: fade(@spectrumDark, 90%);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                -webkit-transition: all ease 0.5s;
+                -moz-transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .caption-content {
+                	position: absolute;
+                	text-align: center;
+                	top: 50%;
+                	left: 0;
+                	right: 0;
+                	margin-top: -15px;
+                	color: @spectrumLight;
+                }
+			}
+			* {
+				z-index: 2;
+			}
+		}
+		.blog-preview-content {
+			background-color: @spectrumLight;
+			color: @spectrumDark;
+			padding: 25px;
+			margin-bottom: 15px;
+			h3 {
+				margin: 0 0 10px;
+				a {
+					color: @spectrumDark;
+					&:hover {
+						color: @spectrumPrimary;
+					}
+				}
+			}
+			p {
+				font-size: 16px;
+				margin: 0;
+				padding-bottom: 5px;
+			}
+			ul.meta {
+				font-size: 14px;
+				color: fade(@spectrumDark, 50%);
+			}
+			.continue {
+				font-size: 14px;
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+
+@media(min-width:767px) {
+	.blog-1 {
+		.blog-preview-content {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.blog-2 {
+    .blog-col {
+    	margin-bottom: 15px;
+        .blog-item {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            .caption {
+                background: fade(@spectrumDark, 90%);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                -webkit-transition: all ease 0.5s;
+                -moz-transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .caption-content {
+                	padding: 25px;
+                    color: @spectrumLight;
+					h3 {
+						margin: 0;
+						padding-bottom: 15px;
+					}
+					p {
+						font-size: 16px;
+						margin: 0;
+						padding-bottom: 15px;
+					}
+					ul.meta {
+						font-size: 14px;
+						color: fade(@spectrumDark, 50%);
+					}
+                }                
+            }            
+        }
+
+    }
+    * {
+        z-index: 2;
+    }
+}
+
+@media(min-width:767px) {
+	.blog-2 {
+		.blog-col {
+			margin-bottom: 30px;
+		}
+	}
+}

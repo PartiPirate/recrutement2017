@@ -1,0 +1,135 @@
+// About Sections
+
+.about-1,
+.about-3 {
+
+    #about-1-carousel,
+    #about-3-carousel {
+        .item {
+            margin: 30px;
+            .info {
+                .list-inline {
+                    font-size: 18px;
+                }
+                p {
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+
+}
+
+@media(min-width:767px) {
+
+    .about-1,
+    .about-3 {
+        #about-1-carousel,
+        #about-3-carousel {
+            .item {
+                width: 225px;
+                height: 225px;
+                margin: 15px auto;
+                border-radius: 50%;
+                position: relative;
+                cursor: default;
+                box-shadow: inset 0 0 0 15px fade(@spectrumLight, 50%);
+                -webkit-transition: all 0.4s ease-in-out;
+                -moz-transition: all 0.4s ease-in-out;
+                -o-transition: all 0.4s ease-in-out;
+                -ms-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out;
+                .background-cover;
+                &:hover {
+                    box-shadow: none;
+                    .info {
+                        -webkit-transform: scale(1);
+                        -moz-transform: scale(1);
+                        -o-transform: scale(1);
+                        -ms-transform: scale(1);
+                        transform: scale(1);
+                        opacity: 1;
+
+                        p,
+                        ul {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .info {
+                    position: absolute;
+                    background: fade(@spectrumPrimary, 80%);
+                    width: inherit;
+                    height: inherit;
+                    border-radius: 50%;
+                    opacity: 0;
+                    -webkit-transition: all 0.4s ease-in-out;
+                    -moz-transition: all 0.4s ease-in-out;
+                    -o-transition: all 0.4s ease-in-out;
+                    -ms-transition: all 0.4s ease-in-out;
+                    transition: all 0.4s ease-in-out;
+                    -webkit-transform: scale(0);
+                    -moz-transform: scale(0);
+                    -o-transform: scale(0);
+                    -ms-transform: scale(0);
+                    transform: scale(0);
+                    -webkit-backface-visibility: hidden;
+                    h3 {
+                        color: @spectrumLight;
+                        font-size: 24px;
+                        margin: 0 30px;
+                        padding: 45px 0 0 0;
+                        height: 120px;
+                    }
+                    p {
+                        color: @spectrumLight;
+                        color: fade(@spectrumLight, 80%);
+                        padding: 10px 5px;
+                        font-style: italic;
+                        margin: 0 30px;
+                        font-size: 14px;
+                        border-top: 1px solid fade(@spectrumLight, 50%);
+                        opacity: 0;
+                        -webkit-transition: all 0.4s ease-in-out 0.4s;
+                        -moz-transition: all 0.4s ease-in-out 0.4s;
+                        -o-transition: all 0.4s ease-in-out 0.4s;
+                        -ms-transition: all 0.4s ease-in-out 0.4s;
+                        transition: all 0.4s ease-in-out 0.4s;
+                    }
+                    ul {
+                        opacity: 0;
+                        -webkit-transition: all 0.4s ease-in-out 0.4s;
+                        -moz-transition: all 0.4s ease-in-out 0.4s;
+                        -o-transition: all 0.4s ease-in-out 0.4s;
+                        -ms-transition: all 0.4s ease-in-out 0.4s;
+                        transition: all 0.4s ease-in-out 0.4s;
+                        li {
+                            a {
+                                color: @spectrumLight;
+                                color: fade(@spectrumLight, 80%);
+                                &:hover {
+                                    color: @spectrumLight;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:767px) {
+    .about-img-1 {
+        background-image: url(../img/demo-portraits/portrait-1.jpg);
+    }
+    .about-img-2 {
+        background-image: url(../img/demo-portraits/portrait-2.jpg);
+    }
+    .about-img-3 {
+        background-image: url(../img/demo-portraits/portrait-3.jpg);
+    }
+    .about-img-4 {
+        background-image: url(../img/demo-portraits/portrait-4.jpg);
+    }
+}
