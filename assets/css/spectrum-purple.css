@@ -920,17 +920,26 @@ a.light-text:focus {
   }
 }
 @media (min-width: 767px) {
-  .about-img-1 {
+  .about-img-SN {
     background-image: url(../img/demo-portraits/portrait-1.jpg);
   }
-  .about-img-2 {
-    background-image: url(../img/demo-portraits/portrait-2.jpg);
+  .about-img-SCN {
+    background-image: url(../img/demo-portraits/cedric_levieux.jpg);
   }
-  .about-img-3 {
-    background-image: url(../img/demo-portraits/portrait-3.jpg);
+  .about-img-PP-1 {
+    background-image: url(../img/demo-portraits/thomas_vermorel.jpg);
   }
-  .about-img-4 {
+  .about-img-PP-2 {
     background-image: url(../img/demo-portraits/portrait-4.jpg);
+  }
+  .about-img-Treso {
+    background-image: url(../img/demo-portraits/maxime_zeiler.png);
+  }
+  .about-img-DVI-1 {
+    background-image: url(../img/demo-portraits/portrait-4.jpg);
+  }
+  .about-img-DVI-2 {
+    background-image: url(../img/demo-portraits/raphael_isla.jpg);
   }
 }
 .blog-1 .blog-col {
