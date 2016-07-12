@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+.simply-hidden {
+	display: none;	
+}
+
+#volunteerVeil {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.7);
+	z-index: 1050;
+}
+
+#volunteerVeil img {
+	margin-top: 200px;
+
+	-webkit-animation: myfirst 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction : alternate;
+	-webkit-animation-play-state : running;
+	animation: myfirst 2s;
+	animation-iteration-count: infinite;
+	animation-direction : alternate;
+	animation-play-state : running;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {opacity: 1;}
+    100% {opacity: 0.3;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0%   {opacity: 1;}
+    100% {opacity: 0.3;}
+}
