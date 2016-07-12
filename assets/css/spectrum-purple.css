@@ -921,7 +921,7 @@ a.light-text:focus {
 }
 @media (min-width: 767px) {
   .about-img-SN {
-    background-image: url(../img/demo-portraits/portrait-1.jpg);
+    background-image: url(../img/demo-portraits/nicolas_petitdemange.png);
   }
   .about-img-SCN {
     background-image: url(../img/demo-portraits/cedric_levieux.jpg);
@@ -930,7 +930,7 @@ a.light-text:focus {
     background-image: url(../img/demo-portraits/thomas_vermorel.jpg);
   }
   .about-img-PP-2 {
-    background-image: url(../img/demo-portraits/portrait-4.jpg);
+    background-image: url(../img/demo-portraits/nicolas_bessau.jpg);
   }
   .about-img-Treso {
     background-image: url(../img/demo-portraits/maxime_zeiler.png);
