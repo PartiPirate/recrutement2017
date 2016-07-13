@@ -63,8 +63,8 @@ $(function() {
 //		return true;
 //	}
 
-//	function check(form) {
-//		var status = true;
+	function check(form) {
+		var status = true;
 //
 //		form.find("input").each(function() {
 //
@@ -75,8 +75,8 @@ $(function() {
 //			}
 //		});
 //
-//		return status;
-//	}
+		return status;
+	}
 
 	function progressHandlingFunction(e) {
 	    if (e.lengthComputable){
