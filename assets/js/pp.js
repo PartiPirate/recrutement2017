@@ -1,5 +1,5 @@
-var donateUrl = "";
-var joinUrl = "";
+var donateUrl = "https://don.partipirate.org";
+var joinUrl = "https://adhesion.partipirate.org";
 
 $(function() {
 //	function changeStatus(id, status, message) {
@@ -110,7 +110,7 @@ $(function() {
 
         		}
         		else {
-	    			$("#main").hide();
+	    			$("#contactForm").hide();
 	    			$("#response").show();
         		}
 	        },
