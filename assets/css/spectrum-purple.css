@@ -202,7 +202,7 @@ hr.dark-small {
   color: #e74c3c;
 }
 @media (min-width: 767px) {
-  p {
+  p, ul, ol {
     margin: 0 0 30px;
     font-size: 18px;
     line-height: 1.6;
@@ -920,7 +920,7 @@ a.light-text:focus {
   }
 }
 @media (min-width: 767px) {
-  .about-img-SN {
+ .about-img-SN {
     background-image: url(../img/demo-portraits/nicolas_petitdemange.png);
   }
   .about-img-SCN {
