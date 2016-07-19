@@ -89,8 +89,8 @@ jQuery(document).ready(function() {
         paginationSpeed: 400,
         singleItem: true,
         navigationText: [
-            "<i class='fa fa-angle-left'></i> Prev",
-            "Next <i class='fa fa-angle-right'></i>"
+            "<i class='fa fa-angle-left'></i> Préc.",
+            "Suiv. <i class='fa fa-angle-right'></i>"
         ],
 
     });
