@@ -4,6 +4,10 @@
 	display: none;	
 }
 
+.owl-item .item img {
+    width: 100%;
+}
+
 #volunteerVeil {
 	position: fixed;
 	top: 0;
