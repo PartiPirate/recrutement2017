@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
@@ -40,6 +38,8 @@
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
 	<!-- Piwik -->
 	<script type="text/javascript">
@@ -57,10 +57,6 @@
 	</script>
 	<noscript><p><img src="//piwik.partipirate.org/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
 	<!-- End Piwik Code -->
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <div id="wrapper">
 
@@ -537,7 +533,7 @@
 							<div class="collapse in" id="identityCollapse">
 								<!-- Language input-->
 								<div class="form-group">
-									<label class="col-md-2 control-label" for="sexInput">Sexe </label>
+									<label class="col-md-2 control-label">Sexe </label>
 									<div class="col-md-10">
 										<input id="sexInput" name="sexInput" value="" type="hidden">
 										<div id="sexButtons" class="btn-group" role="group" aria-label="…">
@@ -635,7 +631,7 @@
 								<!-- Checkbox input-->
 								<div class="form-group">
 									<div class="col-md-2 control-label" style="text-align: right;">
-										<input id="authorize" name="authorize" value="1" type="checkbox" placeholder="" class="input-md">
+										<input id="authorize" name="authorize" value="1" type="checkbox" class="input-md">
 									</div>
 									<div class="col-md-10 padding-left-0">
 										<label class="form-control labelForCheckbox" for="authorize"
@@ -647,7 +643,7 @@
 	
 								<!-- Candidate input-->
 								<div class="form-group">
-									<label class="col-md-2 control-label" for="candidateInput">Vous voulez être ? </label>
+									<label class="col-md-2 control-label">Vous voulez être ? </label>
 									<div class="col-md-10">
 										<input id="candidateInput" name="candidateInput" value="" type="hidden">
 										<div id="candidateButtons" class="btn-group" role="group" aria-label="…">
@@ -671,9 +667,9 @@
 								</div>
 			
 								<div class="form-group has-feedback photo-element otbHidden">
-									<label class="col-md-2 control-label" for="checkFile">Photo en pied</label>
+									<label class="col-md-2 control-label" for="bodyshotFile">Photo en pied</label>
 									<div class="col-md-10">
-										<input id="bodyshotFile" name="bodyshotFile" value="" data-show-upload="false" type="file" placeholder="" class="form-control file input-md" data-show-preview="false">
+										<input id="bodyshotFile" name="bodyshotFile" data-show-upload="false" type="file" class="form-control file input-md" data-show-preview="false">
 										<p class="help-block">
 											Veuillez nous fournir, si possible, une photo de vous sur un fond neutre en haute résolution
 										</p>
@@ -1294,7 +1290,7 @@
 	
 	
 	<div id="volunteerVeil" class="text-center simply-hidden">
-		<img src="assets/img/logo_pp.png">
+		<img src="assets/img/logo_pp.png" alt="Logo du Parti Pirate">
 	</div>
 	
     <!-- Core JavaScript Files -->
