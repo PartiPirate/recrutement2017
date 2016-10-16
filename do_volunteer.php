@@ -120,6 +120,8 @@ else {
 
 	$data["candidature_id"] = $candidature["can_id"];
 
+	// Send mail
+	
 	$data["ok"] = "ok";
 }
 

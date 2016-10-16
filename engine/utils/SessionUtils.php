@@ -21,7 +21,7 @@ class SessionUtils {
 
 	static function getUser($session) {
 		if (isset($session["user"])) {
-			return $session["user"];
+			return json_decode($session["user"], true);
 		}
 		return null;
 	}
