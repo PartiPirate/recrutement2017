@@ -25,6 +25,7 @@ if (!$css) {
 	/* css files for combining */
 	
 	// <!-- Bootstrap -->
+	include ('font-awesome.min.css');
 	include ('bootstrap.min.css');
 	include ('bootstrap-datetimepicker.min.css');
 	include ('ekko-lightbox.min.css');
@@ -34,7 +35,6 @@ if (!$css) {
 	include ('flags.css');
 	include ('social.css');
 	include ('style.css');
-	include ('font-awesome.min.css');
 
 	$css = ob_get_clean();
 	

@@ -18,8 +18,10 @@
 */
 include_once("header.php");
 require_once("engine/bo/CandidateBo.php");
+require_once("engine/bo/CandidateQuestionBo.php");
 
 $candidateBo = CandidateBo::newInstance($connection, $config);
+$candidateQuestionBo = CandidateQuestionBo::newInstance($connection, $config);
 
 $candidates = array();
 
@@ -80,8 +82,27 @@ if ($isConnected) {
 <div class="row-striped row-hover">
 <?php 	
 foreach($candidates as $candidate) {
+	$candidateQuestions = $candidateQuestionBo->getByFilters(array("cas_candidature_id" => $candidate["can_id"]));
+	
+	$answered = 0;
+	foreach($candidateQuestions as $question) {
+		if ($question["cas_answer"]) {
+			$answered++;
+		}
+	}
+	
+	if ($answered == 0) {
+		$answerClass = "none-answered";
+	}
+	else if ($answered == count($candidateQuestions)) {
+		$answerClass = "all-answered";
+	}
+	else {
+		$answerClass = "some-answered";
+	}
+	
 ?>
-	<div class="row data <?php echo str_replace(",", " ", $candidate["can_positions"]); ?> <?php echo $candidate["can_sex"]; ?>">
+	<div class="row data <?php echo $answerClass; ?> <?php echo str_replace(",", " ", $candidate["can_positions"]); ?> <?php echo $candidate["can_sex"]; ?>">
 		<div class="col-md-3">
 			<a href="candidate.php?id=<?php echo $candidate["can_id"]?>"><?php echo $candidate["can_firstname"]; ?> <?php echo $candidate["can_lastname"]; ?></a>
 			

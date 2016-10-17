@@ -115,7 +115,7 @@ if ($isConnected) {
 			<div class="form-group">
 				<label class="col-md-12 control-label" for="question-<?php echo $question["cqu_id"]; ?>"><?php echo utf8_encode($question["cqu_question"]); ?></label>
 				<div class="col-md-12">
-					<textarea class="form-control" id="question-<?php echo $question["cqu_id"]; ?>" name="question-<?php echo $question["cqu_id"]; ?>"><?php echo $question["cas_answer"]; ?></textarea>
+					<textarea class="form-control answer" id="question-<?php echo $question["cqu_id"]; ?>" name="question-<?php echo $question["cqu_id"]; ?>"><?php echo $question["cas_answer"]; ?></textarea>
 				</div>
 			</div>
 

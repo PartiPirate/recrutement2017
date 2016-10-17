@@ -220,3 +220,25 @@ span.chat-text {
 .row-hover > .row:hover {
   background-color: #f5f5f5;
 }
+
+.answer:empty {
+	border-color : red;
+}
+
+.none-answered, .all-answered, .some-answered {
+	border: 2px solid;
+	border-radius: 3px;
+	margin: 1px 0;
+}
+
+.none-answered {
+	border-color: #ac2925;
+} 
+
+.all-answered {
+	border-color: #4cae4c;
+} 
+
+.some-answered {
+	border-color: #d58512;
+} 
