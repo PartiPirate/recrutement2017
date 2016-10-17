@@ -47,10 +47,16 @@ if ($isConnected) {
 		<button value="substitute" type="button" class="btn btn-default active">Suppléant-e</button>
 		<button value="representative" type="button" class="btn btn-default active">Mandataire</button>
 	</div>
-	
+
 	<div id="sexes" class="btn-group" role="group" aria-label="...">
 		<button value="male" type="button" class="btn btn-default active"><i class="fa fa-mars"></i></button>
 		<button value="female" type="button" class="btn btn-default active"><i class="fa fa-venus"></i></button>
+	</div>
+
+	<div id="contacted" class="btn-group" role="group" aria-label="...">
+		<button value="none-answered" type="button" class="btn btn-default active">&Agrave; contacter</button>
+		<button value="some-answered" type="button" class="btn btn-default active">Doit être complété</button>
+		<button value="all-answered" type="button" class="btn btn-default active">A répondu à tout</button>
 	</div>
 	
 	Nombre de personnes : <span class="found_persons"><?php echo count($candidates); ?></span>

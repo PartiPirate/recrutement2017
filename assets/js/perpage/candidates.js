@@ -10,8 +10,13 @@ function toggleCandidates() {
 
 		if ($("button[value=male]").hasClass("active") && line.hasClass("male")) force++;
 		else if ($("button[value=female]").hasClass("active") && line.hasClass("female")) force++;
+
+		if ($("button[value=all-answered]").hasClass("active") && line.hasClass("all-answered")) force++;
+		else if ($("button[value=some-answered]").hasClass("active") && line.hasClass("some-answered")) force++;
+		else if ($("button[value=none-answered]").hasClass("active") && line.hasClass("none-answered")) force++;
+
 		
-		if (force == 2) {
+		if (force == 3) {
 			line.show();
 		}
 	});
@@ -20,7 +25,7 @@ function toggleCandidates() {
 }
 
 $(function() {
-	$("#positions,#sexes").on("click", "button", function() {
+	$("#positions,#sexes,#contacted").on("click", "button", function() {
 		$(this).toggleClass("active");
 		
 		toggleCandidates();
