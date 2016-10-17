@@ -133,4 +133,41 @@ class CandidateAnswerBo {
 
 		return $results;
 	}
+	
+	function getStats() {
+		$query = "	SELECT
+						can_id, count(cas_id) as number_of_answers
+					FROM
+						candidatures
+					LEFT JOIN candidature_answers ON cas_candidature_id = can_id
+					GROUP BY can_id	";
+		
+		$statement = $this->pdo->prepare($query);
+		//		echo showQuery($query, $args);
+		
+		$statement->execute(array());
+		$results = $statement->fetchAll();
+		
+		$stats = array("contacted" => 0, "to_be_contacted" => 0);
+		
+		foreach($results as $index => $line) {
+			foreach($line as $field => $value) {
+			
+				if (!is_numeric($field) && $field == "number_of_answers") {
+					if ($results[$index][$field] == 0) {
+						$stats["to_be_contacted"]++;
+					}
+					else {
+						$stats["contacted"]++;
+					}
+				}
+				
+				if (is_numeric($field)) {
+					unset($results[$index][$field]);
+				}
+			}
+		}
+		
+		return $stats;
+	}
 }

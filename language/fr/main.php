@@ -248,6 +248,9 @@ $lang["install_application_saveButton"] = "Sauver la configuration";
 $lang["install_autodestruct_guide"] = "Vous avez tout testé, tout configuré ? Alors un clic sur <em>autodestruction</em> pour supprimer cet installateur.";
 $lang["install_autodestruct"] = "Autodestruction";
 
+$lang["common_sex_female"] = "Femme";
+$lang["common_sex_male"] = "Homme";
+
 $lang["candidate_position_candidate"] = "Candidat-e";
 $lang["candidate_position_substitute"] = "Suppléant-e";
 $lang["candidate_position_representative"] = "Mandataire";
