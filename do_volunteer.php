@@ -13,8 +13,6 @@ function endsWith($haystack, $needle) {
 	return $needle === "" || strpos($haystack, $needle, strlen($haystack) - strlen($needle)) !== FALSE;
 }
 
-
-
 include_once("config/database.php");
 include_once("config/mail.php");
 require_once("engine/bo/AddressBo.php");
@@ -121,6 +119,55 @@ else {
 	$data["candidature_id"] = $candidature["can_id"];
 
 	// Send mail
+	$mailMessage = "Bonjour
+
+Vous avez manifesté votre volonté de participer aux élections législatives de 2017 sous l'étiquette du Parti Pirate.
+Nous l'avons bien pris en compte et nous reviendrons vers vous très prochainement afin d'échanger au sujet de cette candidature.
+
+Piratement,
+L'équipe Élections";
+	
+	$subject = "Votre Candidature aux elections legislatives de 2017 au nom du Parti Pirate";
+	
+	$mail = getMailInstance();
+	
+	$mail->setFrom($config["smtp"]["from.address"], $config["smtp"]["from.name"]);
+	$mail->addReplyTo($config["smtp"]["from.address"], $config["smtp"]["from.name"]);
+	
+	$mail->Subject = subjectEncode($subject);
+	$mail->msgHTML(str_replace("\n", "<br>\n", utf8_decode($mailMessage)));
+	$mail->AltBody = utf8_decode($mailMessage);
+	
+	$mail->addAddress($email);
+	
+	$mail->SMTPSecure = "ssl";
+	if ($mail->send()) {
+		//		echo "Send SN Mails<br/>";
+	}
+
+	$mail = getMailInstance();
+	
+	$mail->setFrom($config["smtp"]["from.address"], $config["smtp"]["from.name"]);
+	$mail->addReplyTo($config["smtp"]["from.address"], $config["smtp"]["from.name"]);
+	
+	$subject = "[2017] Un-e nouvel-le candidat-e";
+	$mailMessage = "La personne " . $candidature["can_lastname"] . " " . $candidature["can_firstname"] . " a fait acte de candidature.
+			
+Merci de vous en occuper.
+			
+Un bot qui distribue des tâches";
+	
+	$mail->Subject = subjectEncode($subject);
+	$mail->msgHTML(str_replace("\n", "<br>\n", utf8_decode($mailMessage)));
+	$mail->AltBody = utf8_decode($mailMessage);
+	
+	$mail->addAddress("elections@lists.partipirate.org", "Equipe Elections");
+	
+	$mail->SMTPSecure = "ssl";
+	if ($mail->send()) {
+		//		echo "Send SN Mails<br/>";
+	}
+	
 	
 	$data["ok"] = "ok";
 }
