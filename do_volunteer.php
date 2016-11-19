@@ -15,6 +15,7 @@ function endsWith($haystack, $needle) {
 
 include_once("config/database.php");
 include_once("config/mail.php");
+include_once("language/language.php");
 require_once("engine/bo/AddressBo.php");
 require_once("engine/bo/DocumentBo.php");
 require_once("engine/bo/UserBo.php");
@@ -152,7 +153,24 @@ L'équipe Élections";
 	
 	$subject = "[2017] Un-e nouvel-le candidat-e";
 	$mailMessage = "La personne " . $candidature["can_lastname"] . " " . $candidature["can_firstname"] . " a fait acte de candidature.
-			
+
+Informations complémentaires :
+------------------------------
+
+Circonscriptions : " . $_REQUEST["circonscriptions"] . "
+Positions : ";
+
+$positionSeparator = "";
+	
+foreach($positions as $position) {
+	$mailMessage .= $positionSeparator;
+	$mailMessage .= lang("candidate_position_" . $position);
+	
+	$positionSeparator = ", ";
+}
+	
+	$mailMessage .= "
+
 Merci de vous en occuper.
 			
 Un bot qui distribue des tâches";
@@ -166,6 +184,7 @@ Un bot qui distribue des tâches";
 	$mail->SMTPSecure = "ssl";
 	if ($mail->send()) {
 		//		echo "Send SN Mails<br/>";
+		$data["sent"] = "sent";
 	}
 	
 	
