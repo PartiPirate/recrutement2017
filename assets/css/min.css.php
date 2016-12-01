@@ -19,7 +19,7 @@ function compress($buffer) {
 	return $buffer;
 }
 
-if (!$css) {
+if (!$css || true) {
 	ob_start();
 	
 	/* css files for combining */
