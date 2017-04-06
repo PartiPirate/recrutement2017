@@ -19,16 +19,12 @@
 include_once("header.php");
 require_once("engine/bo/CandidateBo.php");
 require_once("engine/bo/CandidateQuestionBo.php");
-
 $candidateBo = CandidateBo::newInstance($connection, $config);
 $candidateQuestionBo = CandidateQuestionBo::newInstance($connection, $config);
-
 $candidates = array();
-
 if ($isConnected) {
 	$candidates = $candidateBo->getByFilters(array());
 }
-
 ?>
 
 <div class="container theme-showcase" role="main">
@@ -42,23 +38,6 @@ if ($isConnected) {
 		?>
 
 <div class="text-center">
-	<div id="positions" class="btn-group" role="group" aria-label="...">
-		<button value="candidate" type="button" class="btn btn-default active">Candidat-e</button>
-		<button value="substitute" type="button" class="btn btn-default active">Suppléant-e</button>
-		<button value="representative" type="button" class="btn btn-default active">Mandataire</button>
-	</div>
-
-	<div id="sexes" class="btn-group" role="group" aria-label="...">
-		<button value="male" type="button" class="btn btn-default active"><i class="fa fa-mars"></i></button>
-		<button value="female" type="button" class="btn btn-default active"><i class="fa fa-venus"></i></button>
-	</div>
-
-	<div id="contacted" class="btn-group" role="group" aria-label="...">
-		<button value="none-answered" type="button" class="btn btn-default active">&Agrave; contacter</button>
-		<button value="some-answered" type="button" class="btn btn-default active">Doit être complété</button>
-		<button value="all-answered" type="button" class="btn btn-default active">A répondu à tout</button>
-	</div>
-
 	Nombre de personnes : <span class="found_persons"><?php echo count($candidates); ?></span>
 </div>
 
@@ -99,23 +78,22 @@ if ($isConnected) {
 	</tr>
 	<?php
 	foreach($candidates as $candidate) {
+		$tPositions = array();
+		if ($candidate["can_positions"]) {
+			$positions = explode(",", $candidate["can_positions"]);
+			foreach($positions as $position) {
+				$tPositions[$position] = 1;
+			}
+		}
 	?>
   <tr>
 		<td><?php echo $candidate["can_id"]?></td>
 		<td><?php echo $candidate["can_firstname"]?> <?php echo $candidate["can_lastname"]?></td>
 		<td><?php echo $candidate["can_sex"]?></td>
-		<td><?php
-					$tPositions = array();
-					if ($candidate["can_positions"]) {
-						$positions = explode(",", $candidate["can_positions"]);
-						foreach($positions as $position) {
-							$tPositions[] = lang("candidate_position_$position");
-						}
-					}
-					echo implode(", ", $tPositions);
-				?>
-    </td>
-		<td><?php	echo str_replace(",", ", ", $candidate["can_circos"])?></td>
+		<td><?php if (isset($tPositions["candidate"])) echo "1"; ?></td>
+		<td><?php if (isset($tPositions["substitute"])) echo "1"; ?></td>
+		<td><?php if (isset($tPositions["representative"])) echo "1"; ?></td>
+		<td><?php echo str_replace(",", ", ", $candidate["can_circos"])?></td>
 		<td></td>
 		<td></td>
 	</tr>
