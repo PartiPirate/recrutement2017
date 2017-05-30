@@ -1,0 +1,37 @@
+body {
+  background-color: white;
+  font-family: "Lucida Sans Unicode";
+}
+
+fieldset {
+  margin-top: 10px;
+}
+
+legend {
+  color:red;
+  font-size: 9pt;
+  margin: 0;
+  border-bottom: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button:disabled {
+  color: #9A9B9B;
+}
+
+#map path.nosection {
+  fill: #CC2D14 !important;
+}
+#map path.pirate {
+  fill: #8814CC !important;
+}
+#map path.lbd {
+  fill: #58CC14 !important;
+}
+#map path.potentiel {
+  fill: #BF6AF0 !important;
+}
