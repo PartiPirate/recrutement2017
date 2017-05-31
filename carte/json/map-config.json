@@ -1,0 +1,7 @@
+{
+  "labels": "json/labels.json",
+  "circos": "json/circos.json",
+  "candidatesWithoutCirco": "/api/candidates/without-circo",
+  "circoHavingNonRegisteredCandidate": "/api/circo/not-registered",
+  "reload": "/api/reload"
+}
